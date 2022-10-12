@@ -1,5 +1,4 @@
 const fs = require('fs');
-//const {EOL} = require('os');
 
 fs.readFile('./input', 'utf8' , (err, data) => {
 
