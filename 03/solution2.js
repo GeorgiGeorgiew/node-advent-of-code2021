@@ -28,17 +28,9 @@ function findRating(curCandidates, curCol, continueWithBiggerCandidate) {
             nextCandidateB[nextCandidateB.length] = line;
         }
     }
-    if(continueWithBiggerCandidate) {
-        if(nextCandidateA.length >= nextCandidateB.length) {
-            return findRating(nextCandidateA, curCol+1, continueWithBiggerCandidate)
-        } else {
-            return findRating(nextCandidateB, curCol+1, continueWithBiggerCandidate)
-        }
-    } else {
-        if(nextCandidateA.length >= nextCandidateB.length) {
+    if(continueWithBiggerCandidate ^ nextCandidateA.length >= nextCandidateB.length) { 
             return findRating(nextCandidateB, curCol+1, continueWithBiggerCandidate)
         } else {
             return findRating(nextCandidateA, curCol+1, continueWithBiggerCandidate)
         }
-    }
 }
