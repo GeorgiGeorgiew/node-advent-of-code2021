@@ -10,7 +10,7 @@ fs.readFile('./input', 'utf8' , (err, data) => {
     lines = data.split("\n").filter(l => l.trim().length > 0)
     board = new Array(lines.length)
     for(i = 0; i < board.length; i++) {
-      board[i] = lines[i].split('').map(x => parseInt(x))
+      board[i] = lines[i].trim().split('').map(x => parseInt(x))
     }
     sum = 0
     for(row = 0; row < board.length; row++) {
